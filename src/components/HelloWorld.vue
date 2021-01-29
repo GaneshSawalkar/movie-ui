@@ -107,9 +107,8 @@ export default {
       var search = {};
       search.s = datas;
       return axios
-        .post(`http://localhost:3000/CampDonation/getAll`, search)
-        .then(result => {
-          console.log(";;;;;;;;;;;;;;;", result);
+        .post(`http://localhost:4000/movies/search/movie`, search)
+        .then(result) {
           if (result.data.Response == "True") {
             this.orders = result.data.Search;
             this.ordersList = result.data.Search;
@@ -123,7 +122,7 @@ export default {
     },
     getMovieList(data) {
       return axios
-        .post(`http://localhost:3000/CampDonation/getAll`, data)
+        .post(`http://localhost:4000/movies/search/movie`, data)
         .then(result => {
           if (result.data == "Incorrect IMDb ID.") {
             this.noDataFound = true;
