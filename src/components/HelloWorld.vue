@@ -108,7 +108,7 @@ export default {
       search.s = datas;
       return axios
         .post(`http://localhost:4000/movies/search/movie`, search)
-        .then(result) {
+        .then(result => {
           if (result.data.Response == "True") {
             this.orders = result.data.Search;
             this.ordersList = result.data.Search;
