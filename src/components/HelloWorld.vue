@@ -132,11 +132,8 @@ export default {
             this.ordersList = result.data.Search;
             this.noDataFound = false;
           }
-          //   // callback(null, result);
         });
-      // .catch(err => {
-      //   // callback(err);
-      // });
+  
     },
     selectedType(data) {
       console.log(data, "aaaaaaaaaaaaaaa");
